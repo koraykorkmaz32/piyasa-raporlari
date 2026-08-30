@@ -1,0 +1,27 @@
+name: Rapor Calistirici
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rapor_olustur:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v3
+
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Rapor Betiğini Çalıştır
+        run: python rapor_uret.py
+
+      - name: Değişiklikleri GitHub'a Kaydet (Commit & Push)
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Günlük rapor eklendi" || echo "Değişiklik yok"
+          git push

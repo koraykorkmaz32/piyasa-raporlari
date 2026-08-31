@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from google import genai # YENİ NESİL: Kütüphane değiştirildi
+from google import genai
 
 # ---------------------------------------------------------
 # BURASI YAPAY ZEKA (GEMINI) KISMI
@@ -22,10 +22,10 @@ Yazı dilin çok profesyonel, bülten tarzında ve ciddi olsun. Hiçbir HTML vey
 """
 
 print("Gemini'dan rapor isteniyor...")
-# Yeni kütüphane ile içerik üretme komutu
+# Google'ın önerdiği en güncel model (3.6) ve komut yapısı:
 yanit = client.models.generate_content(
-    model='gemini-2.5-flash',
-    contents=komut,
+    model='gemini-3.6-flash',
+    contents=komut
 )
 
 # Yapay zekanın cevabını alıyoruz

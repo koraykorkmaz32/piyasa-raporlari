@@ -1,11 +1,11 @@
 import os
 from datetime import datetime
-import google.generativeai as genai # YENİ: Yapay zeka kütüphanesi eklendi
+from google import genai # YENİ NESİL: Kütüphane değiştirildi
 
 # ---------------------------------------------------------
 # BURASI YAPAY ZEKA (GEMINI) KISMI
-# GitHub'a kaydettiğimiz şifreyi (API Key) çekiyoruz
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+# GitHub'a kaydettiğimiz şifreyi (API Key) kullanarak istemciyi başlatıyoruz
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 bugun = datetime.now().strftime("%Y-%m-%d")
 tarih_formatli = datetime.now().strftime("%d %B %Y")
@@ -22,22 +22,24 @@ Yazı dilin çok profesyonel, bülten tarzında ve ciddi olsun. Hiçbir HTML vey
 """
 
 print("Gemini'dan rapor isteniyor...")
-model = genai.GenerativeModel('gemini-1.5-flash')
-yanit = model.generate_content(komut)
+# Yeni kütüphane ile içerik üretme komutu
+yanit = client.models.generate_content(
+    model='gemini-2.5-flash',
+    contents=komut,
+)
 
-# Eskiden uzun uzun yazdığınız metnin yerine artık yapay zekanın cevabını atıyoruz
+# Yapay zekanın cevabını alıyoruz
 spark_rapor_metni = yanit.text
 print("Rapor başarıyla üretildi!")
 # ---------------------------------------------------------
 
 # Metni HTML'de düzgün göstermek için basit bir temizlik yapıyoruz:
-# Satır atlamalarını (Enter) HTML'deki <br> (alt satıra geç) etiketine çeviriyoruz.
 html_rapor_icerigi = spark_rapor_metni.replace('\n', '<br><br>\n')
 
 rapor_klasoru = "raporlar"
 os.makedirs(rapor_klasoru, exist_ok=True)
 
-# Şık Bülten / Makale Tasarımı (SİZİN TASARIMINIZ)
+# Şık Bülten / Makale Tasarımı
 rapor_sayfasi = f"""<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -45,7 +47,7 @@ rapor_sayfasi = f"""<!DOCTYPE html>
     <title>{bugun} Piyasa Raporu</title>
     <style>
         body {{
-            font-family: 'Georgia', serif; /* Raporlara ciddiyet katan font */
+            font-family: 'Georgia', serif;
             background-color: #f0f2f5;
             color: #2c3e50;
             margin: 0;
@@ -109,7 +111,7 @@ rapor_dosyasi = f"{rapor_klasoru}/{bugun}.html"
 with open(rapor_dosyasi, "w", encoding="utf-8") as f:
     f.write(rapor_sayfasi)
 
-# Ana sayfa (Arşiv) tasarımı (SİZİN TASARIMINIZ)
+# Ana sayfa (Arşiv) tasarımı
 rapor_listesi = sorted(os.listdir(rapor_klasoru), reverse=True)
 index_icerik = f"""<!DOCTYPE html>
 <html>

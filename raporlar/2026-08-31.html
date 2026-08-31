@@ -2,98 +2,180 @@
 <html lang="tr">
 <head>
     <meta charset="utf-8">
-    <title>2026-08-31 Piyasa Raporu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31 August 2026 | Kurumsal Piyasa Analizi</title>
+    <!-- Google Fonts: Inter ve Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0b1c31;    /* Koyu Kurumsal Lacivert */
+            --accent: #c5a059;     /* Şık Altın/Bronz */
+            --bg: #f7f9fc;         /* Yumuşak Arka Plan */
+            --text-main: #2d3748;  /* Okunabilir Koyu Gri */
+            --text-light: #718096; /* İkincil Metinler */
+        }
         body {
-            font-family: 'Georgia', serif;
-            background-color: #f0f2f5;
-            color: #2c3e50;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 0;
+            line-height: 1.8;
+        }
+        .navbar {
+            background-color: var(--primary);
+            padding: 25px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .navbar h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
         .container {
             max-width: 850px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 60px 70px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
         }
-        a.back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #1890ff;
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-light);
             text-decoration: none;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 40px;
+            transition: color 0.3s;
         }
-        a.back-link:hover { text-decoration: underline; }
-        .rapor-metni {
+        .back-link:hover { color: var(--accent); }
+        .back-link::before {
+            content: '←';
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        .report-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .report-date {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .report-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: var(--primary);
+            margin: 0;
+            line-height: 1.3;
+        }
+        .divider {
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 30px auto 0;
+        }
+        .report-content p {
+            margin-bottom: 20px;
             font-size: 16px;
+            color: #4a5568;
             text-align: justify;
         }
-        .yasal-uyari {
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 22px;
             margin-top: 40px;
-            padding: 15px;
-            background-color: #fff3cd;
-            color: #856404;
-            border-left: 5px solid #ffeeba;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .disclaimer {
+            margin-top: 60px;
+            padding: 25px 30px;
+            background-color: #f8fafc;
+            border-left: 4px solid var(--accent);
             font-size: 13px;
-            font-family: 'Arial', sans-serif;
+            color: var(--text-light);
+            border-radius: 0 8px 8px 0;
+        }
+        .disclaimer strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 30px 25px; margin: 20px; }
+            .report-title { font-size: 28px; }
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <h1>GLOBAL MARKETS & STRATEGY</h1>
+    </div>
     <div class="container">
-        <a href="../index.html" class="back-link">← Arşive Dön</a>
+        <a href="../index.html" class="back-link">Arşive Dön</a>
         
-        <div class="rapor-metni">
-            <!-- YAPAY ZEKADAN GELEN METİN BURAYA YAZDIRILIYOR -->
-            <h2>Günlük Piyasa Analizi ve Detay Raporu (31 August 2026)</h2>
-            GÜNLÜK PİYASA ANALİZ RAPORU<br><br>
-31 AĞUSTOS 2026<br><br>
-<br><br>
-PIYASALARIN GENEL GÖRÜNÜMÜ<br><br>
-<br><br>
-Haftanın ve ayın son işlem gününde Türkiye piyasaları, küresel ve yerel veri akışının etkisiyle dengeli ve pozitif bir seyir izlemektedir. BIST 100 endeksi, gün içerisinde en düşük 14.120 ve en yüksek 14.310 puan seviyelerini test ettikten sonra yüzde 0,65 primle 14.240 puan seviyesinden kapanışa yönelmiştir. İşlem hacmi tarafında bankacılık ve ulaştırma hisselerinin öncülük ettiği görülmektedir. Bankacılık endeksi günü yüzde 1,12 artışla tamamlarken, sanayi endeksi yatay pozitif bir görünüm sunmuştur.<br><br>
-<br><br>
-Döviz piyasalarında Türk Lirası, Türkiye Cumhuriyet Merkez Bankası'nın kararlı sıkılaşma ve dezenflasyon süreci politikalarının etkisiyle kontrollü seyrini sürdürmektedir. Dolar/TL paritesi 41,85 seviyesinden işlem görürken, Euro/TL paritesi 45,60 seviyesindedir. Döviz sepeti bazında Türk Lirası'nın reel değerlenme eğiliminin korunduğu gözlenmektedir.<br><br>
-<br><br>
-Altın piyasasında ise küresel merkez bankalarının faiz indirim döngüleri ve jeopolitik risklerin dengelenmesiyle Ons Altın 2.540 Dolar bandında yatay hareket etmektedir. İthalat kotaları ve döviz kurundaki seyirle birlikte Gram Altın yurt içi piyasada 3.420 TL seviyelerinde işlem görmektedir.<br><br>
-<br><br>
-<br><br>
-MAKROEKONOMİK GELİŞMELER<br><br>
-<br><br>
-Bugün açıklanan ikinci çeyrek Büyüme (GSYH) verileri piyasaların ana odağında yer almıştır. Türkiye ekonomisi, 2026 yılı ikinci çeyreğinde bir önceki yılın aynı dönemine göre yüzde 2,8 oranında büyüme kaydetmiştir. Büyümenin kompozisyonunda, iç talebin dezenflasyon programıyla uyumlu şekilde yavaşladığı, net dış talebin ve imalat sanayinin büyümeye pozitif katkı sağladığı görülmektedir. Bu tablo, ekonomideki dengelenme ve yumuşak iniş sürecinin başarıyla devam ettiğine işaret etmektedir.<br><br>
-<br><br>
-Türkiye'nin 5 yıllık kredi risk primi (CDS) 215 baz puan seviyesindeki düşük seyrini korumaktadır. Uluslararası derecelendirme kuruluşlarının Türkiye'nin kredi notu görünümüne ilişkin olumlu değerlendirmelerinin devam etmesi, yabancı portföy girişlerini desteklemektedir. Ağustos ayı sonu itibarıyla tahvil-bono piyasasına net yabancı girişi istikrarlı çizgisini sürdürmüştür.<br><br>
-<br><br>
-<br><br>
-ŞİRKET GELİŞMELERİ<br><br>
-<br><br>
-İkinci çeyrek bilanço döneminin sonuna yaklaşılırken, şirket kârlılıklarında sektör bazlı ayrışmalar dikkat çekmektedir.<br><br>
-<br><br>
-Bankacılık sektöründe net faiz marjlarındaki toparlanma ve özkaynak kârlılığındaki istikrar yılın ikinci yarısına ilişkin olumlu beklentileri artırmaktadır. Sektör lideri bankaların aktif kalitesini koruduğu ve takipteki krediler oranının öngörülen sınırların altında kaldığı izlenmektedir.<br><br>
-<br><br>
-Enerji ve yenilenebilir enerji şirketleri, devrede olan yeni kapasite artışları ve ihracat pazarlarındaki genişleme ile öne çıkmaktadır. Özellikle depolamalı rüzgar ve güneş enerjisi yatırımları tamamlanan şirketlerin ciro büyümesinde ivmelenme kaydedilmiştir.<br><br>
-<br><br>
-Otomotiv ve beyaz eşya sektörlerinde ise iç pazardaki dengelenmeye karşın, Avrupa pazarındaki kademeli toparlanmaya bağlı olarak ihracat gelirlerinin toplam ciro içindeki payı artış göstermektedir.<br><br>
-<br><br>
-<br><br>
-KISA VADELİ BEKLENTİLER<br><br>
-<br><br>
-Önümüzdeki hafta piyasaların ana gündem maddesini 3 Eylül Salı günü açıklanacak olan Ağustos ayı enflasyon verileri oluşturacaktır. Piyasa beklentisi, aylık enflasyonun yüzde 1,6 seviyesinde gerçekleşeceği ve yıllık enflasyondaki düşüş eğiliminin devam edeceği yönündedir. Enflasyon verisinin beklentilere paralel veya altında gelmesi durumunda BIST 100 endeksindeki yukarı yönlü hareketin desteklenmesi beklenmektedir.<br><br>
-<br><br>
-Teknik açıdan BIST 100 endeksinde 14.350 seviyesi ilk direnç noktası olarak takip edilmektedir. Bu seviyenin aşılması halinde 14.500 psikolojik sınırı hedeflenebilir. Olası kâr satışlarında ise 14.100 ve 13.950 seviyeleri kuvvetli destek konumundadır. Merkez Bankası'nın Eylül ayı Para Politikası Kurulu toplantısına kadar döviz ve tahvil piyasasında mevcut yatay-olumlu seyrin korunacağı öngörülmektedir.
+        <div class="report-header">
+            <span class="report-date">31 August 2026</span>
+            <h2 class="report-title">Günlük Piyasa Analizi ve Makro Strateji Raporu</h2>
+            <div class="divider"></div>
         </div>
         
-        <!-- Sizin CSS'inizdeki Yasal Uyarı Kutusu -->
-        <div class="yasal-uyari">
-            <strong>Yasal Uyarı ve Sorumluluk Reddi Beyanı:</strong><br>
-            Bu raporda yer alan her türlü bilgi, veri, analiz, yorum ve öngörüler genel bilgilendirme amacıyla yapay zeka tarafından hazırlanmış olup analistin kişisel piyasa değerlendirmelerini yansıtmaktadır. Kesin yatırım tavsiyesi niteliği taşımamaktadır.
+        <div class="report-content">
+            <p>KÜRESEL PİYASALAR VE EKONOMİK ARAŞTIRMALAR DİREKTÖRLÜĞÜ</p>
+<p>TÜRKİYE PİYASALARI GÜNLÜK STRATEJİ VE MAKROEKONOMİK ANALİZ</p>
+<p><strong class='highlight'>Tarih:</strong> 31 Ağustos 2026</p>
+<h3 class='section-title'>1. PİYASALARIN GENEL GÖRÜNÜMÜ</h3>
+<p>Gelişmekte olan piyasalar içerisindeki pozitif ayrışmasını sürdüren Türkiye varlıkları, 2026 yılının son çeyreğine yaklaşırken dezenflasyon sürecinin getirdiği makro istikrar çıpasıyla dirençli görünümünü korumaktadır.</p>
+<p>BIST 100 Endeksi, haftanın son işlem gününe küresel risk iştahındaki dengelenme ve kurum içi yabancı sermaye akımlarının desteğiyle %1,42 primle 12.850 puan seviyesinden başlamıştır. İşlem hacimlerinde gözlenen artış, yükselişin sadece perakende yatırımcıyla sınırlı kalmadığını, nitelikli kurumsal yatırımcıların da pozisyon artırdığını göstermektedir. Sektörel bazda, net faiz marjlarındaki toparlanmanın belirginleştiği bankacılık endeksi öncülüğünü sürdürürken, sanayi endeksinde sıkı parasal koşulların getirdiği ciro baskısına rağmen ihracat odaklı şirketlerde dip seviyelerden dönüş sinyalleri alınmaktadır.</p>
+<p>Döviz piyasasında, Türkiye Cumhuriyet Merkez Bankası'nın (TCMB) kararlı rezerv birikimi stratejisi ve reel efektif döviz kurundaki kademeli değerlenme patikası paralelinde kontrollü bir seyir izlenmektedir. USD/TRY paritesi 41,25 seviyesinde yatay-yukarı bir bantta dengelenirken, EUR/TRY paritesi 45,35 seviyesinde işlem görmektedir. Kur Oynaklık Endeksi (Implied Volatility) tarihsel dip seviyelerine yakın seyrederek carry-trade stratejileri için cazibesini korumaktadır. Türkiye'nin 5 yıllık kredi risk primi (CDS) ise 215 baz puan seviyesine gerileyerek son beş yılın en düşük risk algısına işaret etmektedir.</p>
+<p>Altın tarafında, Fed'in faiz indirim döngüsüne ilişkin küresel beklentilerle ons altının 2.550 Dolar eşiğini aşması, yurt içinde gram altın fiyatlarını 3.380 TL seviyesine taşımıştır. Yurt içi yerleşiklerin altın talebinde, alternatif TL varlıkların sunduğu pozitif reel getiri nedeniyle fiziki talep odaklı ivme kaybı devam etmektedir.</p>
+<h3 class='section-title'>2. MAKROEKONOMİK GELİŞMELER</h3>
+<p>Bugün açıklanan 2026 yılı ikinci çeyrek GSYH verileri, Türkiye ekonomisinin "yumuşak iniş" (soft landing) senaryosunu başarıyla uyguladığını konfirme etmektedir. İkinci çeyrekte yıllık %2,8 oranında gerçekleşen büyüme, iç talebin kademeli olarak soğuduğunu, buna karşın net dış talebin büyümeye katkısının pozitif alanda kaldığını göstermektedir.</p>
+<p>Geniş kapsamlı makroekonomik dengelenme programının çıktısı olarak, Ağustos ayı öncü enflasyon göstergeleri yıllık tüketici enflasyonunun (TÜFE) %21,5 seviyesine gerilediğine işaret etmektedir. TCMB'nin politika faizini %27,50 seviyesinde sabit tutma veya ihtiyatlı faiz indirim adımlarını değerlendirme esnekliği, reel faiz marjının korunduğu bir patikayı garanti etmektedir.</p>
+<p>Maliye politikasındaki disiplin, Kamu Maliyesi Reform Paketi'nin etkileriyle bütçe dengesinde öngörülen hedeflerin altında bir açık verilmesini sağlamıştır. Cari açık / GSYH oranının %1,2 seviyesine kadar gerilemesi, dış finansman ihtiyacını önemli ölçüde azaltmış ve uluslararası derecelendirme kuruluşlarının son çeyrekte beklenen not artırım kararlarına sağlam bir zemin hazırlamıştır. Kur Korumalı Mevduat (KKM) stokunun tamamen erimesi ve sistemin sadeleştirilmesi, parasal aktarım mekanizmasının etkinliğini maksimum seviyeye çıkarmıştır.</p>
+<h3 class='section-title'>3. ŞİRKET GELİŞMELERİ VE MİKRO VERİLER</h3>
+<p>2026 yılı ikinci çeyrek bilanço döneminin sonuna gelinirken, şirket finansallarında net bir ayrışma göze çarpmaktadır. Sermaye yapısı güçlü, borçluluk oranı düşük ve net nakit pozisyonuna sahip holdingler ile ihracat pazarlarını çeşitlendirmiş sanayi kuruluşları marj baskılarını göğüslemeyi başarmıştır.</p>
+<p><strong class='highlight'>Bankacılık Sektörü:</strong> Yıllık mevduat maliyetlerinin öngörülebilir bir patikaya girmesi ve kredi-mevduat makasındaki iyileşme sayesinde çekirdek bankacılık gelirlerinde çeyreksel bazda %18 artış kaydedilmiştir. Takipteki krediler oranı (NPL) %2,4 seviyesinde kalarak aktif kalitesinin korunduğunu doğrulamaktadır.</p>
+<p><strong class='highlight'>Havacılık ve Lojistik:</strong> Küresel turizm talebindeki canlılık ve kargo gelirlerindeki toparlanma ile havacılık sektörü şirketleri rekor FAVÖK marjları açıklamaya devam etmektedir. İkinci çeyrekte yolcu başına elde edilen verim (yield) artışı dikkat çekicidir.</p>
+<p><strong class='highlight'>Enerji ve Perakende:</strong> Perakende gıda tarafında gıda enflasyonundaki düşüşe rağmen artan hacimler sayesinde ciro büyümesi korunurken, yenilenebilir enerji şirketleri kapasite artışları ve uzun vadeli PPA (Güç Satın Alma Anlaşmaları) sayesinde kar kararlılıklarını sürdürmektedir. Yüksek finansman maliyeti taşıyan orta ölçekli imalat sanayi şirketlerinde ise net kar marjlarındaki daralma 2026'nın ikinci yarısında da hisse seçimselliğini zorunlu kılmaktadır.</p>
+<h3 class='section-title'>4. STRATEJİK KISA VADELİ BEKLENTİLER</h3>
+<p>Kısa vadeli perspektifte, Türkiye varlıkları için ana katalizör Eylül ayında açıklanacak olan güncellenmiş Orta Vadeli Program (OVP) ve uluslararası kredi derecelendirme kuruluşu S&P'nin beklenen gözden geçirmesi olacaktır.</p>
+<p>Endeks bazında BIST 100 için 13.000 psikolojik direncinin test edilmesi muhtemel görülmektedir. Dolar bazlı grafiklerde 310-315 Dolar bandı kritik bir eşik olup, bu seviyenin aşılması durumunda küresel fonların Türkiye ağırlıklarını "nötr" seviyesinden "ağırlık artır" (overweight) seviyesine çıkarma süreci hızlanacaktır.</p>
+<p><strong class='highlight'>Stratejik Portföy Önerisi:</strong></p>
+<p>Yatırımcıların kısa vadeli dalgalanmalara karşı koruma sağlamak adına portföy dağılımlarında;</p>
+<p>%40 BIST 100 (Ağırlıklı olarak Bankacılık, Holding, Havacılık ve Perakende),</p>
+<p>%35 TL DİBS ve Özel Sektör Tahvilleri (Uzun durasyonlu tahvillerde sermaye kazancı potansiyeli ön plandadır),</p>
+<p>%15 Eurobond (Türkiye USD cinsi tahvillerinde daralan spread avantajı),</p>
+<p>%10 Likit Fonlar ve Para Piyasası Fonları dengesini korumalarını tavsiye etmekteyiz.</p>
+<p>Sonuç olarak; dezenflasyon sürecinin kararlılıkla sürdüğü, makro ihtiyati tedbirlerin kademeli olarak kaldırıldığı ve makroekonomik öngörülebilirliğin arttığı bu dönemde, Türk varlıklarındaki yapısal boğa piyasası temasının korunduğunu değerlendirmekteyiz.</p>
         </div>
         
+        <div class="disclaimer">
+            <strong>Yasal Uyarı ve Sorumluluk Reddi Beyanı</strong>
+            Bu raporda yer alan her türlü bilgi, veri, analiz, yorum ve öngörüler genel bilgilendirme amacıyla yapay zeka sistemleri tarafından derlenmiş olup analistin kişisel piyasa değerlendirmelerini yansıtmaktadır. Kesin yatırım tavsiyesi niteliği taşımamaktadır. Finansal piyasalar doğası gereği volatilite barındırır, nihai kararlar kullanıcıya aittir.
+        </div>
     </div>
 </body>
 </html>

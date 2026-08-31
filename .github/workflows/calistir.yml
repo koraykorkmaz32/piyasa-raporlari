@@ -13,10 +13,10 @@ jobs:
       - name: Python Kur
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11' # Sürüm güncellendi
 
       - name: Gerekli Kütüphaneleri Kur
-        run: pip install google-generativeai
+        run: pip install google-genai # Kütüphane güncellendi
 
       - name: Rapor Betiğini Çalıştır
         env:

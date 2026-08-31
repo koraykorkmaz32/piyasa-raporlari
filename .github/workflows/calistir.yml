@@ -15,7 +15,12 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Gerekli Kütüphaneleri Kur
+        run: pip install google-generativeai
+
       - name: Rapor Betiğini Çalıştır
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python rapor_uret.py
 
       - name: Değişiklikleri GitHub'a Kaydet (Commit & Push)
@@ -23,5 +28,5 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add .
-          git commit -m "Günlük rapor eklendi" || echo "Değişiklik yok"
+          git commit -m "Yapay Zeka ile günlük rapor eklendi" || echo "Değişiklik yok"
           git push
